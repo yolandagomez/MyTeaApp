@@ -2,11 +2,11 @@ const express = require('express');
 const router = express.Router();
 
 /* GET home page. */
-router.get('/greeting', (req, res, next) {
-  res.render('index', { title: 'Express' }); // esto lo he dejado del template del express generator, probablemente no me sirva, Jessica lo tiene distinto
+router.get('/greeting', (req, res) => {
+  res.send('<h1>My tea notes</h1>');
 });
 
-router.get('/', (req, res) => {
+router.get('/notes', (req, res) => {
   res.status(200).json({ //this is the response that will appear on Postman
     success: true,
     notes: [
