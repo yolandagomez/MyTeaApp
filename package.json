@@ -1,0 +1,14 @@
+{
+  "name": "myteaapp",
+  "version": "1.0.0",
+  "description": "My first ever tea app",
+  "main": "app.js",
+  "scripts": {
+    "start": "NODE_ENV=prod node server need to be specified app",
+    "dev": "nodemon app"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}
