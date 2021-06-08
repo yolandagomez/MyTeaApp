@@ -5,11 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- for creating & submit the form-->
 </head>
-<body>
-    <div class="container">
-        {{{body}}}
-    </div>
-    
+    <script>
+        function editNote (id) {
+            $("#mainForm").attr("action", "/notes/" + id);
+            $("#mainForm").submit();
+        }
+
+        function createNote () { //we are going to create a fake endopoint to be  able to see smt
+            $("#mainForm").attr("action", '/view/create');
+            $("#mainForm").submit();
+        }
+    </script>   
+
+<body class="main">
+    {{{body}}}
+    <form id="mainForm" method="GET"></form>
 </body>
+
 </html>
