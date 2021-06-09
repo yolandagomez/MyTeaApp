@@ -9,8 +9,7 @@ const morgan = require ('morgan');
 dotenv.config({path: './config/config.env'});
 
 
-const MONGODB_LOCAL=process.env.LOCAL_MONGODB_URL; //we are creating the ddbb
-mongoose.connect(MONGODB_LOCAL, {useNewUrlParser: true, useUnifiedTopology: true});
+
 //initialize express app
 const app = express();
 const PORT = process.env.PORT || 3000; //whatever is in the environment variable PORT, or 3000

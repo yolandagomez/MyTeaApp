@@ -2,11 +2,7 @@ const express = require('express');
 const router = express.Router();
 const noteController = require('../controllers/notes'); //moving through files
 
-
 /* GET home page. */
-router.get('/greeting', noteController.createGreeting);
-
-router.get('/notes', noteController.allNotes);
 
 router.get('/id', noteController.getNoteById);
 
@@ -21,4 +17,4 @@ router.post('/', noteController.createNote);
 //exports router to use it on app.js
 module.exports = router;
 
-//why there is no error handle here ??????
+//why there is no error handler here ??????
