@@ -12,7 +12,7 @@ exports.displayAllNotes = (req, res, next) => {
 }
 
 exports.login = (req, res) => {
-
+  //login logic
 }
 /*
 exports.getAllNotes = (req, res, next) => {
