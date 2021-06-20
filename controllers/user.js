@@ -1,8 +1,19 @@
-exports.getAllNotes = (req, res, next) => {
+const User = require ("../models/user");
 
-  res.render('/user/notes.hbs');  //views is already considered by default
+exports.getAllNotes = (req, res, next) => {
+  //User.findById = (req.user._id) //we request the user id
+  res.render('notes/notes.hbs', {id:1});  //views is already considered by default
 };
 
+exports.displayAllNotes = (req, res, next) => {
+  User.findById(req.req.params.id);
+  console.log(req.params.id);
+  res.render('notes/notes.hbs')
+}
+
+exports.login = (req, res) => {
+  //login logic
+}
 /*
 exports.getAllNotes = (req, res, next) => {
 
